@@ -1,5 +1,7 @@
 FROM ubuntu:20.04
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt update -y
 
 RUN apt install htop xfce4 xfce4-goodies xfonts-base -y
