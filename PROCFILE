@@ -1,0 +1,11 @@
+docker build . --tag docker-linux-vnc:1.0
+
+docker run --publish 5090:5090 --name docker-linux-vnc_container docker-linux-vnc:1.0
+docker create --publish 5090:5090 --name docker-linux-vnc_container docker-linux-vnc:1.0
+docker start docker-linux-vnc_container
+docker stop docker-linux-vnc_container
+
+docker-compose up
+docker-compose down
+
+docker rmi $(docker images -qa -f 'dangling=true')

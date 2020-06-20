@@ -1,0 +1,6 @@
+FROM ubuntu:20.04
+
+RUN apt update -y
+
+CMD tail -f /dev/null
+

@@ -1,0 +1,6 @@
+version: "3"
+services:
+  docker-linux-vnc:
+    ports:
+      - "5090:5090"
+    image: docker-linux-vnc:1.0
